@@ -1,9 +1,14 @@
 import './App.css';
-import Podcast from "./itunes/Podcast/index"
 import {Route,Routes,Link} from  "react-router-dom"
-import MusicVideo from "./itunes/MusicVideo"
-import Music from "./itunes/Music"
 import Audiobook from "./itunes/Audiobook"
+import Ebook from "./itunes/Ebook"
+import Favorite from "./itunes/Favorite"
+import Home from "./itunes/Home"
+import Music from "./itunes/Music"
+import MusicVideo from "./itunes/MusicVideo"
+import Podcast from "./itunes/Podcast"
+import Software from "./itunes/Software"
+import TvShow from "./itunes/TvShow"
 
 
 function App() {
@@ -18,12 +23,7 @@ function App() {
         <div id="navbar">
             <ul id="home">
             <Link to="/Podcast" class="link-style">Podcast</Link>
-            <Link to="/MusicVideo" class="link-style">MusicVideo</Link>
-            <Link to="/Music" class="link-style">Music</Link>
-            <Link to="/Audiobook" class="link-style">Audiobook</Link>
-            <Link to="/TvShow" class="link-style">TvShow</Link>
-            <Link to="/Software" class="link-style">Software</Link>
-            <Link to="/Ebook" class="link-style">Ebook</Link>
+            
             <Link to="/HOME" class="link-style">HOME</Link>
             <Link to="/Favorite" class="link-style">Favorite</Link>
 
@@ -42,12 +42,17 @@ function App() {
         </div>
 
         
-
+        <Link to="/MusicVideo" class="link-style">MusicVideo</Link>
+            <Link to="/Music" class="link-style">Music</Link>
+            <Link to="/Audiobook" class="link-style">Audiobook</Link>
+            <Link to="/TvShow" class="link-style">TvShow</Link>
+            <Link to="/Software" class="link-style">Software</Link>
+            <Link to="/Ebook" class="link-style">Ebook</Link>
 
         
 
     </div>
-    
+
    <Routes>
    <Route exact path="/Audiobook" element={<Audiobook />} />
    <Route path="/Ebook" element={<Ebook/>} />
