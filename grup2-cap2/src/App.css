@@ -9,10 +9,10 @@
      height: auto; 
     min-height: 100%;
     display: table;
-    /* background: url("https://images.pexels.com/photos/6564823/pexels-photo-6564823.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
-    /* background-attachment: fixed; */
+    background: url("");
+     background-attachment: fixed;
     margin: 0;
-  }
+  } 
    
 
   
@@ -92,9 +92,17 @@
   
   
   #footer {
-    width: 100%;
+    /* width: 100%;
     background-color: rgba(0, 0, 0, 0.76);
-    margin: 0;
+    margin: 0; */
+
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/ 
+    height: 40px;
+    background: grey;
 
 
   }
