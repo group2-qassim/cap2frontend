@@ -9,7 +9,6 @@
      height: auto; 
     min-height: 100%;
     display: table;
-    background: url("");
      background-attachment: fixed;
     margin: 0;
   } 
@@ -26,9 +25,13 @@
   }
   
   #home {
-    display: inline-flex;
-    float: left;
+    gap: 100px;
+    
   }
+
+
+
+
   #navbar {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3;
@@ -44,6 +47,11 @@
     background-color: white;
     padding: 8px 16px;
     border-radius: 500px;
+    width: 10%;
+  }
+  .img{
+    width: 80px;
+    
   }
   .link-style:hover {
     background-color: lightgray;
