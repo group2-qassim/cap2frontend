@@ -44,7 +44,7 @@
   
   .link-style {
     color: black;
-    background-color: white;
+    /* background-color: white; */
     padding: 8px 16px;
     border-radius: 500px;
     width: 10%;
@@ -71,7 +71,7 @@
     transition: 200ms;
   }
   a:hover {
-    color: gray;
+    /* color: gray; */
     transition: 800ms;
   }
  
