@@ -15,11 +15,15 @@ export default function Items() {
   const getAllItems = async () => {
     const items = await axios.get(`${BASE_URL}/${catg}`);
     setItems(items.data.results);
+    console.log(items.data.results);
   };
 
   const goToItem = (item) => {
     navigate(`/${catg}/itemDetails/${item.trackId}`);
   };
+
+  //artistName
+  //
 
   return (
     <div>
@@ -31,7 +35,7 @@ export default function Items() {
               goToItem(item);
             }}
           >
-            <h4>{item.trackName}</h4>
+            <h4>{item.artistName}</h4>
           </div>
         ))}
       </ul>

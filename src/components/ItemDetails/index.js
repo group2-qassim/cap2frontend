@@ -16,7 +16,7 @@ export default function ItemDetails() {
   const getAllItems = async () => {
     const item = await axios.get(`${BASE_URL}/${catg}/${id}`);
     setItem(item.data);
-    //console.log(item.data);
+    console.log(item.data);
   };
 
   return (
