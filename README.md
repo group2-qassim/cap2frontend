@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Home :
+The main page consists of types of the category and each category contains its own components. If you click on it, it takes you to the page designated for it.
+Search:
+Search allows you to shorten the time in searching for your favorite singer or program, with the search feature in uppercase or lowercase.
+Favorite:
+When you take a tour on the website and a particular list comes to your attention, you can save it to your favorites and find it back again whenever you like.
+Category for each section:
+If you pass the mouse arrow on the categories, the components of the page will appear in brief. If you want to read about them, you can, by one click on the image, go to its contents in details.

@@ -13,21 +13,72 @@ const BASE_URL = "http://localhost:4000";
 export default function Items() {
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
+  const [fav, setFav] = useState([]);
+  const [change, setChange] = useState(0);
   const catg = useParams().catg;
   useEffect(() => {
     getAllItems();
+    getAllFav();
   }, []);
 
   const getAllItems = async () => {
     const items = await axios.get(`${BASE_URL}/${catg}`);
-    console.log(catg);
     setItems(items.data.results);
-    console.log(items.data.results);
+  };
+
+  const getAllFav = async () => {
+    const items = await axios.get(`${BASE_URL}/user/getFav`);
+    setFav(items.data);
+    //console.log(items.data);
   };
 
   const goToItem = (item) => {
-    navigate(`/${catg}/itemDetails/${item.trackId}`);
+    axios
+      .post(`${BASE_URL}/user/addToCurrent`, {
+        result: item,
+      })
+      .then(function (response) {
+        navigate(`/itemDetails/${item.trackId}`);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
+
+  const setInFav = (itemObj) => {
+    setChange(change + 1);
+    const found = fav.find((found) => {
+      return found.itemObj.trackId == itemObj.trackId;
+    });
+
+    if (found == undefined)
+      axios
+        .post(`${BASE_URL}/user/addToFav`, {
+          itemObj,
+        })
+        .then(function (response) {
+          // console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    else {
+      // console.log(found);
+      axios
+        .post(`${BASE_URL}/user/deleteFav`, {
+          itemObj,
+        })
+        .then(function (response) {
+          //console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+  };
+  useEffect(() => {
+    getAllFav();
+  }, [change]);
 
   return (
     <section className="section-items">
@@ -35,8 +86,19 @@ export default function Items() {
         {items.map((item) => (
           <div className="card">
             <div className="fav">
-              <button className="icon-btn">
-                <AiOutlineHeart />
+              <button
+                className="icon-btn"
+                onClick={() => {
+                  setInFav(item);
+                }}
+              >
+                {fav.find((found) => {
+                  return found.itemObj.trackId == item.trackId;
+                }) ? (
+                  <AiFillHeart />
+                ) : (
+                  <AiOutlineHeart />
+                )}
               </button>
             </div>
             <div
@@ -72,7 +134,16 @@ export default function Items() {
                   </span>
                 </p>
               </div>
-              <img className="card-img" src={item.artworkUrl100} />
+              <img
+                className="card-img"
+                src={
+                  item.artworkUrl600 !== undefined
+                    ? item.artworkUrl600
+                    : item.artworkUrl512 !== undefined
+                    ? item.artworkUrl512
+                    : item.artworkUrl100
+                }
+              />
             </div>
           </div>
         ))}

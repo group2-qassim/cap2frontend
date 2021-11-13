@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import logo from "../../img/logo.png";
+import "./style.css";
+import { BsSearch } from "react-icons/bs";
 export default function Header() {
   const navigate = useNavigate();
   const viewSearchPage = (e) => {
@@ -8,25 +10,30 @@ export default function Header() {
       navigate(`/search/${e.target.value}`);
     }
   };
-
   return (
-    <div class="wrapper">
-      <div id="navbar">
-        <div id="home">
-          <Link to="/" class="link-style">
-            HOME
+    <div>
+      <div id="navbar2">
+        <img className="logo2" src={logo} class="img" alt="#" />
+        <div id="home2">
+          <Link to="/" className="space">
+            Home
           </Link>
-          <Link to="/favorite" class="link-style">
+          <Link to="/favorite" className="space">
             Favorite
           </Link>
         </div>
-        <input
-          type="text"
-          name="searchText"
-          onKeyPress={(e) => {
-            viewSearchPage(e);
-          }}
-        />
+
+        <div className="seacsh-box2">
+          <input
+            className="search2"
+            placeholder="Search..."
+            type="text"
+            name="searchText"
+            onKeyPress={(e) => {
+              viewSearchPage(e);
+            }}
+          />
+        </div>
       </div>
     </div>
   );
