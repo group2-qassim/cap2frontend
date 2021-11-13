@@ -22,9 +22,6 @@ export default function Items() {
     navigate(`/${catg}/itemDetails/${item.trackId}`);
   };
 
-  //artistName
-  //
-
   return (
     <div>
       <ul>
