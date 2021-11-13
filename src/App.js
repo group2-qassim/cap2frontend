@@ -17,7 +17,8 @@ function App() {
         <Route path="/favorite" element={<Fav />} />
         <Route path="/search/:str" element={<Search />} />
         <Route path="/items/:catg" element={<Items />} />
-        <Route path="/:catg/itemDetails/:id" element={<ItemDetails />} />
+        <Route path="/itemDetails/:id" element={<ItemDetails />} />
+        <Route path="/itemDetails/:id" element={<ItemDetails />} />
         <Route path="*" element={<h1> 404 </h1>} />
       </Routes>
       <Footer />

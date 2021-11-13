@@ -1,0 +1,29 @@
+.search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: 200px;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 3px solid white;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-family: Comic Sans MS;
+  color: white;
+  outline: none;
+  transition: 0.5s;
+}
+.search:hover input {
+  width: 350px;
+  background: #272133;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  transition: 0.2s;
+}

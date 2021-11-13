@@ -1,14 +1,77 @@
-/* .main {
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url("https://morningistanbul.com/wp-content/uploads/2020/03/%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%AC%D8%AF-%D9%81%D9%8A-%D8%AA%D8%B1%D9%83%D9%8A%D8%A7-scaled.jpg");
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 1ms;
+  box-sizing: border-box;
+}
+.main1 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("https://static.wixstatic.com/media/e22b05_6469a426842946d59d186ad8cab783cd~mv2.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 650px;
+  height: 600px;
   margin: 0;
   padding: 0;
-} */
+}
+.but1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  border-radius: 50%;
+  /* display: grid; */
+  /* grid-template-columns: repeat(4,1ft); */
+  gap: 1.6rem;
+  padding: 3.2rem 0;
+}
+.img1 {
+  /* float: left; */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.card1 {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  object-fit: cover;
+  transition: 1s;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.container1 {
+  padding: 0 1.2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-items: center;
+}
+.img-item1:hover img {
+  transform: scale(1.1);
+}
+
+.card1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0 5px 20px 1px rgb(128, 128, 128);
+  position: relative;
+  overflow: hidden;
+  height: 260px;
+}
+
+.section-items1 {
+  margin: 1.2rem auto;
+  width: 100%;
+  padding: 0 15.6rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.card-img1 {
+  width: 100%;
+  height: 20rem;
+}
