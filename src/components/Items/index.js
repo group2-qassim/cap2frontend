@@ -29,9 +29,6 @@ export default function Items() {
     navigate(`/${catg}/itemDetails/${item.trackId}`);
   };
 
-  //artistName
-  //
-
   return (
     <section className="section-items">
       <div className="cards-box">
