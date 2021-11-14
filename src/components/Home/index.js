@@ -1,13 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import music from "../../img/music.png";
-import Podcast1 from "../../img/podcast.png";
-import MusicVideo1 from "../../img/MusicVideo.png";
-import Audiobook1 from "../../img/Audiobook.png";
-import TvShow1 from "../../img/TvShow.png";
-import Software1 from "../../img/Software.png";
-import Move1 from "../../img/movepng.png";
-import All from "../../img/all.png";
 import "./style.css";
 export default function Home() {
   const navigate = useNavigate();

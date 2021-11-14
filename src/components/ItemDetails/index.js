@@ -4,7 +4,7 @@ import axios from "axios";
 import "./style.css";
 import { AiOutlineHeart } from "react-icons/ai";
 
-const BASE_URL = "http://localhost:4000";
+const BASE_URL = "https://qassim-d.herokuapp.com";
 
 export default function ItemDetails() {
   const id = useParams().id;
