@@ -9,7 +9,7 @@ import { GrCatalog } from "react-icons/gr";
 import { BsFillCalendarDateFill } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
 
-const BASE_URL = "http://localhost:4000";
+const BASE_URL = "https://qassim-d.herokuapp.com";
 
 export default function Search() {
   const navigate = useNavigate();

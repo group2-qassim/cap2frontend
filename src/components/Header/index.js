@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../img/logo.png";
 import "./style.css";
-import { BsSearch } from "react-icons/bs";
+
 export default function Header() {
   const navigate = useNavigate();
   const viewSearchPage = (e) => {

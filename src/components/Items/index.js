@@ -8,7 +8,7 @@ import { GiEarthAfricaEurope } from "react-icons/gi";
 import { GrCatalog } from "react-icons/gr";
 import { BsFillCalendarDateFill } from "react-icons/bs";
 
-const BASE_URL = "http://localhost:4000";
+const BASE_URL = "https://qassim-d.herokuapp.com";
 
 export default function Items() {
   const navigate = useNavigate();
